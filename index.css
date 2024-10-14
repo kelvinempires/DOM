@@ -8,6 +8,8 @@
 }
 body {
   background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .main-div {
   display: flex;
@@ -39,10 +41,10 @@ body {
   border-bottom: 1px solid rgba(0, 0, 0, 0.075);
   padding: 0 0 10px 0;
 }
-.span1 {
+#span1 {
   font-weight: bolder;
 }
-.span2 {
+#span2 {
   font-size: x-small;
   text-decoration: line-through;
   font-weight: 700;
@@ -55,6 +57,7 @@ body {
   color: darkorange;
   padding: 1px 3px;
 }
+
 .pXSmall {
   font-size: xx-small;
   font-weight: 600;
@@ -70,6 +73,13 @@ body {
   color: rgba(0, 0, 0, 0.806);
   font-weight: 500;
 }
+.love-and-oneFitForAll {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 10px;
+}
 .div2 {
   color: rgba(255, 140, 0, 0.767);
   border: 1px solid rgba(255, 140, 0, 0.705);
@@ -78,26 +88,67 @@ body {
   width: fit-content;
   margin: 5px 0px;
 }
-.div3 {
+#addToCart {
   background-color: darkorange;
   color: whitesmoke;
-  font-size: xx-small;
+  font-size: large;
   padding: 10px;
-  border-radius: 2px;display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-/* .bodyDiv {
+  border: 1px solid darkorange;
+  border-radius: 5px;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
-  padding: 0px;
-} */
+  width: 400px;
+  gap: 130px;
+  cursor: pointer;
+}
+
+#addToCart:hover,
+#minusBtn:hover,
+#addBtn:hover {
+  background-color: rgba(255, 140, 0, 0.831);
+}
+.btn {
+  display: none;
+  font-size: large;
+  border-radius: 5px;
+  /* display: flex; */
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  width: 400px;
+  padding-left: 170px;
+}
+#love1 {
+  font-size: xx-large;
+  color: rgba(255, 140, 0, 0.196);
+  cursor: pointer;
+}
+#minusBtn {
+  border: none;
+  background-color: rgba(255, 140, 0, 0.235);
+  color: #fff;
+  font-size: xx-large;
+  font-weight: bolder;
+  border-radius: 5px;
+  width: 50px;
+  padding: 0px 2px;
+  cursor: pointer;
+}
+#addBtn {
+  border: none;
+  background-color: rgba(255, 140, 0, 0.635);
+  font-size: xx-large;
+  font-weight: bolder;
+  border-radius: 5px;
+  width: 50px;
+  padding: 0px 2px;
+  cursor: pointer;
+}
 .slider-wrapper {
   overflow: hidden;
   overflow-x: visible;
   max-width: 90px;
-  /* height: 20px; */
   margin: 10px 70px;
 }
 .mainDIv-left {
@@ -106,7 +157,7 @@ body {
   justify-content: start;
   align-items: start;
 }
-#bigImage {
+.bigImage {
   background-color: aquamarine;
   height: 200px;
   margin: 10px 10px 0px 5px;
@@ -117,26 +168,148 @@ body {
   padding: 0%;
 }
 
-.card-list .card-item,#user-image-1,
-#user-image-2,
-#user-image-3,
-#user-image-4,
-#user-image-5,
-#user-image-6,
-#user-image-7 {
+.card-list .card-item,
+.user-image-1,
+.user-image-2,
+.user-image-3,
+.user-image-4,
+.user-image-5,
+.user-image-6,
+.user-image-7,
+.user-image-8,
+.user-image-9,
+.user-image-10,
+.user-image-11,
+.user-image-12,
+.user-image-13,
+.user-image-14,
+.user-image-15,
+.user-image-16,
+.user-image-17,
+.user-image-18,
+.user-image-19,
+.user-image-20,
+.user-image-21,
+.user-image-22,
+.user-image-23,
+.user-image-24,
+.user-image-25,
+.user-image-26,
+.user-image-27,
+.user-image-28,
+.user-image-29,
+.user-image-30,
+.user-image-31,
+.user-image-32,
+.user-image-33,
+.user-image-34,
+.user-image-35,
+.user-image-36,
+.user-image-37,
+.user-image-38,
+.user-image-39,
+.user-image-40,
+.user-image-41,
+.user-image-42,
+.user-image-43,
+.user-image-44,
+.user-image-45,
+.user-image-46,
+.user-image-47,
+.user-image-48,
+.user-image-49,
+.user-image-50,
+.user-image-51,
+.user-image-52,
+.user-image-53,
+.user-image-54,
+.user-image-55,
+.user-image-56,
+.user-image-57,
+.user-image-58,
+.user-image-59,
+.user-image-60,
+.user-image-61,
+.user-image-62,
+.user-image-63,
+.user-image-64,
+.user-image-65,
+.user-image-66,
+.user-image-67 {
   height: 40px;
   width: 30px;
   object-fit: cover;
   transition: all ease-in-out 0.5s;
   padding-bottom: 20px;
 }
-.card-list .card-item #user-image-1:hover,
-#user-image-2:hover,
-#user-image-3:hover,
-#user-image-4:hover,
-#user-image-5:hover,
-#user-image-6:hover,
-#user-image-7:hover {
+.card-list .card-item .user-image-1:hover,
+.user-image-2:hover,
+.user-image-3:hover,
+.user-image-4:hover,
+.user-image-5:hover,
+.user-image-6:hover,
+.user-image-7:hover,
+.user-image-8:hover,
+.user-image-9:hover,
+.user-image-10:hover,
+.user-image-11:hover,
+.user-image-12:hover,
+.user-image-13:hover,
+.user-image-14:hover,
+.user-image-15:hover,
+.user-image-16:hover,
+.user-image-17:hover,
+.user-image-18:hover,
+.user-image-19:hover,
+.user-image-20:hover,
+.user-image-21:hover,
+.user-image-22:hover,
+.user-image-23:hover,
+.user-image-24:hover,
+.user-image-25:hover,
+.user-image-26:hover,
+.user-image-27:hover,
+.user-image-28:hover,
+.user-image-29:hover,
+.user-image-30:hover,
+.user-image-31:hover,
+.user-image-32:hover,
+.user-image-33:hover,
+.user-image-34:hover,
+.user-image-35:hover,
+.user-image-36:hover,
+.user-image-37:hover,
+.user-image-38:hover,
+.user-image-39:hover,
+.user-image-40:hover,
+.user-image-41:hover,
+.user-image-42:hover,
+.user-image-43:hover,
+.user-image-44:hover,
+.user-image-45:hover,
+.user-image-46:hover,
+.user-image-47:hover,
+.user-image-48:hover,
+.user-image-49:hover,
+.user-image-50:hover,
+.user-image-51:hover,
+.user-image-52:hover,
+.user-image-53:hover,
+.user-image-54:hover,
+.user-image-55:hover,
+.user-image-56:hover,
+.user-image-57:hover,
+.user-image-58:hover,
+.user-image-59:hover,
+.user-image-60:hover,
+.user-image-61:hover,
+.user-image-62:hover,
+.user-image-63:hover,
+.user-image-64:hover,
+.user-image-65:hover,
+.user-image-66:hover,
+.user-image-67:hover,
+.user-image-68:hover {
   width: 55px;
   height: 55px;
 }
@@ -154,7 +327,3 @@ body {
 .slider-wrapper .swiper-slide-button:hover {
   color: darkorange;
 }
-/* @media (max-width: 768px); /*#small-img{
-
-
-
